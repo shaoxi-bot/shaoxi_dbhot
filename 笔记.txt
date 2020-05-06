@@ -1,0 +1,43 @@
+想要让git对一个目录进行版本控制需要以下步骤：
+1.进入要管理的文件夹
+2.执行初始化命令
+git init
+
+3.管理目录下的文件状态
+git status
+注：新增的文件和修改过后的文件都是红色
+4.管理指定文件（红变绿）
+git add 文件名
+git add .（所有文件）
+
+5.个人信息设置：用户名，用户邮箱【一次即可】
+git config --global user.name "name"
+git config --global user.email "user.email"
+
+6.生成版本
+git commit -m '描述信息'
+
+回滚：
+回滚至之前的版本
+git log 【查看版本信息】
+git reset --hard 版本号
+
+回滚至之后的版本
+git reflog 【查看版本信息】
+git reset --hard 版本号
+
+拓展：
+1.版本库退回到暂存区
+git reset --soft 版本号
+
+2.暂存区退回到新文件或变动文件
+git reset HEAD
+
+3.新文件或变动的文件退会到已管理文件
+git checkout
+
+4.版本库退回到新文件或变动文件
+git reset --mix
+
+5. 版本库退回到已管理文件
+git reset --hard 版本号
